@@ -15,6 +15,10 @@ int main()
 	print_head(total_mem, command);
 
 	//≥ı ºªØ¡¥±Ì
-	init_function[command](total_mem);
-	
+	init_function[command](total_mem, command);
+
+	while (1)
+	{
+		break;
+	}
 }

@@ -70,7 +70,7 @@ int get_command()
 }
 
 //初始化函数数组
-void init(int(*alloc[])(int, int), void(*init_func[])(int))
+void init(int(*alloc[])(int, int), void(*init_func[])(int,int))
 {
 	alloc[1] = first_fit;
 
