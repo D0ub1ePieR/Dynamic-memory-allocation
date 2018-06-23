@@ -73,8 +73,10 @@ int get_command()
 void init(int(*alloc[])(int, int), void(*init_func[])(int,int))
 {
 	alloc[1] = first_fit;
+	alloc[2] = next_fit;
 
 	init_func[1] = init_ff;
+	init_func[2] = init_nf;
 }
 
 //

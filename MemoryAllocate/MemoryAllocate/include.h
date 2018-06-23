@@ -5,3 +5,4 @@
 using namespace std;
 
 #include "first_fit.h"
+#include "next_fit.h"

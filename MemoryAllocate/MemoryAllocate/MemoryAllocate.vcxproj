@@ -149,11 +149,13 @@
     <ClCompile Include="first_fit.cpp" />
     <ClCompile Include="global.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="next_fit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="first_fit.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="include.h" />
+    <ClInclude Include="next_fit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
