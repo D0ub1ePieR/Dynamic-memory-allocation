@@ -146,12 +146,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="best_fit.cpp" />
     <ClCompile Include="first_fit.cpp" />
     <ClCompile Include="global.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="next_fit.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="best_fit.h" />
     <ClInclude Include="first_fit.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="include.h" />
