@@ -30,6 +30,9 @@
     <ClCompile Include="best_fit.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="worst_fit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="first_fit.h">
@@ -45,6 +48,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="best_fit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="worst_fit.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

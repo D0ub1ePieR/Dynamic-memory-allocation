@@ -151,6 +151,7 @@
     <ClCompile Include="global.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="next_fit.cpp" />
+    <ClCompile Include="worst_fit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="best_fit.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="global.h" />
     <ClInclude Include="include.h" />
     <ClInclude Include="next_fit.h" />
+    <ClInclude Include="worst_fit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
