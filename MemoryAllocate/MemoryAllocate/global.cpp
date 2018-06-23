@@ -76,3 +76,97 @@ void init(int(*alloc[])(int, int), void(*init_func[])(int,int))
 
 	init_func[1] = init_ff;
 }
+
+//
+void get_action(int *number,int *size)
+{
+	string tmp;
+	string t1, t2;
+	int flag1, flag2, i;
+	while (1)
+	{
+		cout << "     ---------------------------------------------------------------------" << endl;
+		cout << "     |                     请选择你要执行的操作                          |" << endl;
+		cout << "     |                     1.占用内存                                    |" << endl;
+		cout << "     |                     2.释放内存                                    |" << endl;
+		cout << "     |                     3.退出程序                                    |" << endl;
+		cout << "     ---------------------------------------------------------------------" << endl;
+		cout << "     请输入你的选择:";
+		cin >> tmp;
+		if (tmp.length() == 1 && tmp[0] <= '3' && tmp[0] >= '1')
+		{
+			switch (tmp[0])
+			{
+				case '1':
+					while (1)
+					{
+						flag1 = 0;
+						flag2 = 0;
+						cout << "     请输入添加的程序的进程号以及占用大小:";
+						cin >> t1 >> t2;
+						for (i = 0; i < t1.length(); i++)
+							if (!isdigit(t1[i]))
+								flag1 = 1;
+						for (i = 0; i < t2.length(); i++)
+							if (!isdigit(t2[i]))
+								flag2 = 1;
+						if (!flag1 && !flag2)
+						{
+							*number = atoi(t1.c_str());
+							*size = atoi(t2.c_str());
+							break;
+						}
+						else
+							cout << ">>>>>请输入正确的数据!" << endl;
+					}
+					break;
+				case '2':
+					while (1)
+					{
+						flag1 = 0;
+						cout << "     请输入删除的程序的进程号:";
+						cin >> t1;
+						for (i = 0; i < t1.length(); i++)
+							if (!isdigit(t1[i]))
+								flag1 = 1;
+						if (!flag1)
+						{
+							*number = atoi(t1.c_str());
+							*size = -1;
+							break;
+						}
+						else
+							cout << ">>>>>请输入正确的数据!" << endl;
+					}
+					break;
+				case '3':
+					*number = -1;
+					*size = -1;
+					break;
+			}
+			break;
+		}
+		else
+			cout << ">>>>>请输入正确的选择!" << endl;
+	}
+}
+
+//输出结果
+void print_result(int res)
+{
+	switch (res)
+	{
+	case -1:
+		cout << "                               进程号有误!" << endl;
+		system("pause");
+		break;
+	case -2:
+		cout << "                               分配失败!" << endl;
+		system("pause");
+		break;
+	case 1:
+		cout << "                               操作成功!" << endl;
+		system("pause");
+		break;
+	}
+}
